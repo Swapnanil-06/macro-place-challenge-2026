@@ -1,4 +1,4 @@
-# Auction Placer — Partcl x HRT Macro Placement Challenge 2026
+# Auction Placer - Partcl x HRT Macro Placement Challenge 2026
 
 A combinatorial auction-based macro placer for the [Partcl x HRT Macro Placement Challenge](https://github.com/partcleda/macro-place-challenge-2026).
 
@@ -9,6 +9,9 @@ A combinatorial auction-based macro placer for the [Partcl x HRT Macro Placement
 | IBM benchmarks (×17) | 2.0433 | +3.8% | -40.2% | 0 | ~223s total |
 | NG45 benchmarks (×4) | 0.9966 | — | — | 0 | ~1s total |
 
+<img width="754" height="529" alt="image" src="https://github.com/user-attachments/assets/b1faf567-3a7f-4156-ab5a-4fb3816ed995" />
+
+
 ### NG45 breakdown
 
 | Benchmark | Proxy | WL | Density | Congestion |
@@ -18,22 +21,22 @@ A combinatorial auction-based macro placer for the [Partcl x HRT Macro Placement
 | mempool_tile | 1.1154 | 0.068 | 1.268 | 0.827 |
 | nvdla | 1.0458 | 0.155 | 0.900 | 0.881 |
 
+<img width="736" height="251" alt="image" src="https://github.com/user-attachments/assets/c439df81-97dd-4d91-832d-c7630e9e87ee" />
+
+
 ## How it works
 
 Macro placement is framed as a combinatorial auction:
 
-1. **Auction** — the canvas is divided into a 16×16 grid of candidate slots. Each macro bids on the slot that maximises its value function `-(wirelength + α·density)`. When two macros want the same slot, the loser is re-queued and bids again with updated prices. High-fanout macros bid first.
+1. **Auction** - the canvas is divided into a 16×16 grid of candidate slots. Each macro bids on the slot that maximises its value function `-(wirelength + α·density)`. When two macros want the same slot, the loser is re-queued and bids again with updated prices. High-fanout macros bid first.
 
-2. **Legalization** — macros are placed largest-first. Each macro is positioned at its auction-assigned slot, or spiral-searched outward until a non-overlapping canvas-legal position is found.
+2. **Legalization** - macros are placed largest-first. Each macro is positioned at its auction-assigned slot, or spiral-searched outward until a non-overlapping canvas-legal position is found.
 
-3. **Local refinement** — random pairs of macros swap positions; the swap is kept if it reduces HPWL, discarded otherwise.
+3. **Local refinement** - random pairs of macros swap positions; the swap is kept if it reduces HPWL, discarded otherwise.
 
 ## Usage
 
 ```bash
-# Single benchmark
-uv run evaluate submissions/swapnanil-submission/auction_algo.py -b ibm01
-
 # All IBM benchmarks
 uv run evaluate submissions/swapnanil-submission/auction_algo.py --all
 
@@ -41,7 +44,7 @@ uv run evaluate submissions/swapnanil-submission/auction_algo.py --all
 uv run evaluate submissions/swapnanil-submission/auction_algo.py --ng45
 
 # With visualization
-uv run evaluate submissions/swapnanil-submission/auction_algo.py -b ibm01 --vis
+uv run evaluate submissions/swapnanil-submission/auction_algo.py -all --vis
 ```
 
 ## Parameters
@@ -55,10 +58,10 @@ uv run evaluate submissions/swapnanil-submission/auction_algo.py -b ibm01 --vis
 
 ## Requirements
 
-Follows the standard competition setup — see the root [SETUP.md](../../SETUP.md).
+Follows the standard competition setup - see the root [SETUP.md](../../SETUP.md).
 
 ```bash
-git clone https://github.com/your-username/macro-place-challenge-2026
+git clone https://github.com/Swapnanil-06/macro-place-challenge-2026.git
 cd macro-place-challenge-2026
 git submodule update --init external/MacroPlacement
 uv sync
