@@ -7,7 +7,7 @@ A combinatorial auction-based macro placer for the [Partcl x HRT Macro Placement
 | Suite | Avg Proxy | vs SA | vs RePlAce | Overlaps | Runtime |
 |-------|-----------|-------|------------|----------|---------|
 | IBM benchmarks (×17) | 2.0433 | +3.8% | -40.2% | 0 | ~223s total |
-| NG45 benchmarks (×4) | 0.9966 | — | — | 0 | ~1s total |
+| NG45 benchmarks (×4) | 0.9966 | — | — | 0 | ~0.6s total |
 
 <img width="754" height="529" alt="image" src="https://github.com/user-attachments/assets/b1faf567-3a7f-4156-ab5a-4fb3816ed995" />
 
