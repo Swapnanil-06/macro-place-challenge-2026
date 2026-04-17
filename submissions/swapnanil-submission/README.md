@@ -14,14 +14,15 @@ A combinatorial auction-based macro placer for the [Partcl x HRT Macro Placement
 
 ### NG45 breakdown
 
-| Benchmark | Proxy | WL | Density | Congestion |
-|-----------|-------|----|---------|------------|
-| ariane133 | 0.8979 | 0.089 | 0.854 | 0.763 |
-| ariane136 | 0.9271 | 0.095 | 0.880 | 0.784 |
-| mempool_tile | 1.1154 | 0.068 | 1.268 | 0.827 |
-| nvdla | 1.0458 | 0.155 | 0.900 | 0.881 |
+| Benchmark | Proxy | WL | Density | Congestion | Overlaps |
+|-----------|-------|----|---------|------------|----------|
+| ariane133 | 0.8979 | 0.089 | 0.854 | 0.763 | 0 |
+| ariane136 | 0.9271 | 0.095 | 0.880 | 0.784 | 0 |
+| mempool_tile | 1.1154 | 0.068 | 1.268 | 0.827 | 0 |
+| nvdla | 1.0458 | 0.155 | 0.900 | 0.881 | 0 |
 
-<img width="736" height="251" alt="image" src="https://github.com/user-attachments/assets/c439df81-97dd-4d91-832d-c7630e9e87ee" />
+<img width="755" height="243" alt="image" src="https://github.com/user-attachments/assets/412524d8-4c85-4646-899f-c5cceb6c5f13" />
+
 
 
 ## How it works
